@@ -45,8 +45,8 @@ funciones_variables["PC"]["Alta"] = (trifm,(75,100,100,0,100))
 
 
 valores_entrada = {}
-valores_entrada["TC"] = 7
-valores_entrada["LLC"] = 35
+valores_entrada["TC"] = 11
+valores_entrada["LLC"] = 76
 
 
 #Crear el Sistema
@@ -54,7 +54,7 @@ sistema = Sistema("Mamdani","bisectriz",reglas,funciones_variables,dominio_varia
 #sistema = Sistema("Larsen","middlemo",reglas,funciones_variables,dominio_variables)
 
 
-print(sistema.solve(valores_entrada))
+print(f'Para una cola de tamanno {valores_entrada["TC"]} y una probabilidad de llegada del camion de {valores_entrada["LLC"]} % , se tiene una probabilidad de compra exitosa de {sistema.solve(valores_entrada)} %' )
 
 
 
